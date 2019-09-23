@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/dist/app.css">
     <title>Webpack</title>
+    <% for (let css in htmlWebpackPlugin.files.css) { %>
+      <link rel="stylesheet" href=".<%= htmlWebpackPlugin.files.css[css] %>">
+    <% } %>
   </head>
   <body>
     <div id="app">
@@ -15,5 +17,9 @@
       </div>
 
     </div>
+
+    <% for (let js in htmlWebpackPlugin.files.js) { %>
+      <script src=".<%= htmlWebpackPlugin.files.js[js] %>"></script>
+    <% } %>
   </body>
 </html>
