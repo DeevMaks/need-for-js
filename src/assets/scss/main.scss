@@ -2,3 +2,13 @@
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
+
+.hide {
+  display: none;
+}
+
+.car {
+  width: 50px;
+  height: 100px;
+  background: transparent url(../img/player.png) center / cover no-repeat;
+}
