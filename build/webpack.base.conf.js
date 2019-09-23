@@ -43,13 +43,14 @@ module.exports = {
       test: /\.(png|jpg|jpeg|JPG|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: `${PATHS.assets}/img/[name].[ext]`
+        name: `${PATHS.assets}img/[name].[ext]`,
+        publicPath: '../..'
       }
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: `${PATHS.assets}/img/[name].[ext]`
+        name: `${PATHS.assets}fonts/[name].[ext]`
       }
     }, {
       test: /\.vue$/,
